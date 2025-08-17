@@ -1,0 +1,142 @@
+<!doctype html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Dutch_Bikes</title>
+	<link href="../Dutch_Bikes/Doc.css" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" href="https://use.typekit.net/kuj4kju.css">
+	<script type="text/javascript" src="../Dutch_Bikes/DocScript.js"></script>
+    <link rel="shortcut icon" type="image/x-icon" href="../../Branding/80sIconLight.png"/>
+</head>
+	
+<body>
+	<nav id="Nav" class="TopBar">
+		<a href="../FileSelect" id="CloseBTN"  draggable="false">
+		    <div id="Button_left" class="NavElement">
+                <img src="../Images/CloseButton.png" alt="" width="65" height="14" class="NavImg" id="NavCloseIMG" draggable="false"/>
+		    </div>
+        </a>
+		<div id="Title_center" class="NavElement">
+			<h1 id="Title" class="unselectable">Dutch_Bikes.DOC</h1>
+		</div>
+		<div id="Button_right1" class="NavElement">
+			<img src="../Images/Down ArrowButton.png" width="30.32" height="37.48" alt="" class="NavImg" id="ArrowDownIMG" draggable="false"/>
+		</div>
+		<div id="Button_right2" class="NavElement">
+			<img src="../Images/Up & Downbutton.png" width="63.38" height="38" alt="" class="NavImg" id="ArrowUpIMG" draggable="false"/>
+		</div>
+	</nav>
+	<div id="INav2" class="TopBar">
+		<img src="../Images/Close small.png" width="32" height="12" alt="" class="NavImg" id="CloseIMG" draggable="false"/>
+		<div class="Nav2" id="NavFile">
+			<h2>File</h2>
+		</div>
+		<div class="Nav2" id="NavEdit">
+			<h2>Edit</h2>
+		</div>
+		<div class="Nav2" id="NavView">
+			<h2>View</h2>
+		</div>
+		<div class="Nav2" id="NavInsert">
+			<h2>Insert</h2>
+		</div>
+		<div class="Nav2" id="NavFormat">
+			<h2>Format</h2>
+		</div>
+		<div class="Nav2" id="NavUtil">
+			<h2>Utilities</h2>
+		</div>
+		<div class="Nav2" id="NavMacro">
+			<h2>Macro</h2>
+		</div>
+		<div class="Nav2" id="NavWin">
+			<h2>Window</h2>
+		</div>
+	</div>
+	<div id="formatR1" class="TopBar">
+		<p class="label">Font:</p>
+		<div class="dropdown" id="fontSel">
+			<p class="dropbtn" id="fontInd">Tms Rmn</p>
+			<div class="dropdown-content" id="dropdown-font">
+				<p class="opt" onClick="fontEntr(0)">Tms Rmn</p>
+				<p class="opt" onClick="fontEntr(1)">Puffin</p>
+				<p class="opt" onClick="fontEntr(2)">Source Code</p>
+				<p class="opt" onClick="fontEntr(3)">Terminal</p>	
+			</div>
+		</div>
+    	<img src="../Images/Box.png" alt="" class="fontMenu" id="s" onClick="fontSelOpen()" draggable="false"/>
+		
+		<p class="label" id="pts">Pts:</p>
+		<input type="number" id="NumInp" max="20" min="8" required step="1" value="10" onchange="checkValue(this);">
+		<img src="../Images/Box.png" alt="" class="fontMenu" draggable="false"/>
+		
+    	<img src="../Images/BoldButton.png" alt="" id="boldButn" onclick="Bold(this)" draggable="false"/>
+   		<img src="../Images/ItalicButton.png" alt="" id="ItalicButn" onclick="Italic(this)" draggable="false"/>
+    	<img src="../Images/kButton.png" alt="" class="genButn" id="Kbtn" onclick="Kbtn(this)" draggable="false"/>
+		
+    	<img src="../Images/UnderlineButton.png" alt="" id="UnderlineButn" onclick="Underline(this)" draggable="false"/>
+    	<img src="../Images/wButton.png" alt="" id="DashedButn" class="genButn" onclick="Wbtn(this)" draggable="false"/>
+		<img src="../Images/dButon.png" alt="" id="DoubleButn" class="genButn" onclick="Dbtn(this)" draggable="false"/>
+		
+    	<img src="../Images/plusEqualButn.png" alt="" id="plusEqualButn" onclick="Math(this)" draggable="false"/>
+		
+    	<img src="../Images/starButn.png" alt="" id="starButn" onclick="Star(this)" draggable="false"/>
+	</div>
+	<div id="formatR2" class="TopBar">
+		<p class="label">Style:</p>
+        <div class="dropdown" id="styleSel">
+			<p class="dropbtn" id="styleind">Normal</p>
+			<div class="dropdown-content" id="dropdown-style">
+				<p class="opt" onClick="styleEntr(0)">Title</p>
+				<p class="opt" onClick="styleEntr(1)">Heading</p>
+				<p class="opt" onClick="styleEntr(2)">Subheading</p>
+				<p class="opt" onClick="styleEntr(3)">Normal</p>	
+			</div>
+		</div>
+    	<img src="../Images/Box.png" alt="" class="fontMenu" onClick="styleSelOpen()" draggable="false"/>
+		
+    	<img src="../Images/leftAlignPressed.png" alt="" class="allignText" id="leftAllignText" onclick="Left()" draggable="false"/>
+		<img src="../Images/centerAlign.png" alt="" class="allignText" id="centerAllignText" onclick="Center()" draggable="false"/>
+		<img src="../Images/rightAllign.png" alt="" class="allignText" id="rightAlligntText" onclick="Right()" draggable="false"/>
+		<img src="../Images/justifyAllign.png" alt="" class="allignText" id="justifyText" onclick="Just()" draggable="false"/>
+		
+		<img src="../Images/spaceing1Pressed.png" alt="" class="spaceingText" id="space1" onclick="Space1()" draggable="false"/>
+		<img src="../Images/spaceing2.png" alt="" class="spaceingText" id="space2" onclick="Space2()" draggable="false"/>
+		<img src="../Images/spaceing3.png" alt="" class="spaceingText" id="space3" onclick="Space3()" draggable="false"/>
+		
+		<img src="../Images/bracket1Pressed.png" alt="" class="bracketText" id="brTxtButn" onclick="BR1()" draggable="false"/>
+		<img src="../Images/bracket2.png" alt="" class="bracketText" id="brTxtButn2" onclick="BR2()" draggable="false"/>
+		
+		<img src="../Images/textLeftUpPressed.png" alt="" class="arrowsText" id="leftUpButn" onclick="Arrow1()" draggable="false"/>
+		<img src="../Images/textUp.png" alt="" class="arrowsText" id="UpButn" onclick="Arrow2()" draggable="false"/>
+		<img src="../Images/textRightUp.png" alt="" class="arrowsText" id="rightUpButn" onclick="Arrow3()" draggable="false"/>
+		<img src="../Images/textUp2.png" alt="" class="arrowsText" id="Up2Butn" onclick="Arrow4()" draggable="false"/>
+		
+		<img src="../Images/RulerButnPressed.png" alt="" id="rulerButn" onclick="Ruler(this)" draggable="false"/>
+	</div>
+	<div id="Ruler" class="TopBar">
+    	<img src="../Images/Ruler.png" alt="" id="ruler" draggable="false"/>
+	</div>
+	<div id="Content" style="overflow-y:scroll;">
+		<p id="Text"> <strong>The Netherlands Bike Revolution</strong>
+<br> <br>
+
+September 18, 1989 | In the midst of the bustling canals and cobblestone streets of the Netherlands, a quiet revolution has been taking place, one that is as unique as it is inspiring. Over the past two decades, the Dutch have embarked on a journey towards a two-wheeled future, gradually transforming their nation into a cycling paradise. <br> <br>
+
+The story of Dutch cycling, however, is one marked by both resilience and adaptation. It reaches back to the 1920s and '30s, a time that witnessed the first golden age of Dutch biking. The bicycle was the people's trusty companion for daily commutes, grocery runs, and leisurely rides through picturesque towns. It was the embodiment of Dutch freedom and mobility.<br> <br>
+
+Yet, history took an unfortunate turn during World War II when the Nazis occupied the Netherlands. They imposed tire rations, making it difficult for citizens to buy new bikes or repair their existing ones. To add insult to injury, they shamelessly stole bicycles, leaving the nation in a state of despair. The war itself took a heavy toll on the country's transportation infrastructure, with 60% of it being reduced to rubble. In the post-war era, the automobile took center stage. Economic prosperity led to a surge in car ownership, with a meteoric rise from 139,000 cars in 1950 to a staggering 3.4 million by 1970. Cars became more affordable, and people got richer. The government responded by investing heavily in road infrastructure to accommodate the automobile boom.
+<br> <br>
+
+However, this automotive frenzy came at a steep price. By the 1970s, an alarming 3,000 people were losing their lives to car accidents each year, sparking outrage and calls for change. In 1971, a devastating tragedy occurred when 500 children, including young Simone Langenhauff, lost their lives to cars, igniting the "Stop de kindermoort" (Stop the Child Murder) movement, led by Simone's grieving father. In 1972, the Dutch government faced a stark reality when a report revealed that it would cost billions to continue expanding car infrastructure. The oil crisis of the early '70s further complicated matters, as the price of oil skyrocketed by 300%, prompting car-free Sundays and raising questions about the sustainability of car-centric lifestyles.
+<br> <br>
+
+The change towards a bicycle-friendly nation was gradual but deliberate. Early attempts, such as building bright red bike lanes in cities like The Hague and Tilburg, proved ineffective in increasing cycling rates. It became evident that constructing a comprehensive network of bike lanes and routes was essential. Delft led the way by building a city-wide network, resulting in a 6% increase in bicycle use and a 3% decrease in car use. However, it wasn't until the 1980s that the Netherlands truly embarked on a transformative journey toward prioritizing cycling. Bright red bike lanes began to crisscross cities like The Hague and Tilburg, but it became evident that bike lanes alone could not trigger the desired shift. The secret lay in building an extensive network, a vision realized by Delft, which created a city-wide bicycle network. In response, cycling rates soared by 6%, while car use dropped by 3%.
+<br> <br>
+
+As we stand on the cusp of a new decade, the Netherlands finds itself at the forefront of the bicycle revolution. The Dutch have shown the world that embracing cycling isn't just about reducing traffic congestion or promoting healthier living; it's about creating a safer, more sustainable, and interconnected society. In the years to come, the Netherlands is poised to continue its journey toward a bicycle-centric future, a testament to the nation's ability to adapt, innovate, and prioritize the well-being of its people and the planet. As the winds of change blow through the Dutch countryside, the world watches with admiration and anticipation, wondering if this small, determined nation will be the catalyst for a global shift towards sustainable transportation.<br> <br>
+</p>
+	</div>
+</body>
+
+</html>

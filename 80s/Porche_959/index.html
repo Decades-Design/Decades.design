@@ -1,0 +1,146 @@
+<!doctype html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Porche_959</title>
+	<link href="../Porche_959/Doc.css" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" href="https://use.typekit.net/kuj4kju.css">
+	<script type="text/javascript" src="../Porche_959/DocScript.js"></script>
+    <link rel="shortcut icon" type="image/x-icon" href="../../Branding/80sIconLight.png"/>
+</head>
+	
+<body>
+	<nav id="Nav" class="TopBar">
+		<a href="../FileSelect" id="CloseBTN"  draggable="false">
+		    <div id="Button_left" class="NavElement">
+                <img src="../Images/CloseButton.png" alt="" width="65" height="14" class="NavImg" id="NavCloseIMG" draggable="false"/>
+		    </div>
+        </a>
+		<div id="Title_center" class="NavElement">
+			<h1 id="Title" class="unselectable">Porche_959.DOC</h1>
+		</div>
+		<div id="Button_right1" class="NavElement">
+			<img src="../Images/Down ArrowButton.png" width="30.32" height="37.48" alt="" class="NavImg" id="ArrowDownIMG" draggable="false"/>
+		</div>
+		<div id="Button_right2" class="NavElement">
+			<img src="../Images/Up & Downbutton.png" width="63.38" height="38" alt="" class="NavImg" id="ArrowUpIMG" draggable="false"/>
+		</div>
+	</nav>
+	<div id="INav2" class="TopBar">
+		<img src="../Images/Close small.png" width="32" height="12" alt="" class="NavImg" id="CloseIMG" draggable="false"/>
+		<div class="Nav2" id="NavFile">
+			<h2>File</h2>
+		</div>
+		<div class="Nav2" id="NavEdit">
+			<h2>Edit</h2>
+		</div>
+		<div class="Nav2" id="NavView">
+			<h2>View</h2>
+		</div>
+		<div class="Nav2" id="NavInsert">
+			<h2>Insert</h2>
+		</div>
+		<div class="Nav2" id="NavFormat">
+			<h2>Format</h2>
+		</div>
+		<div class="Nav2" id="NavUtil">
+			<h2>Utilities</h2>
+		</div>
+		<div class="Nav2" id="NavMacro">
+			<h2>Macro</h2>
+		</div>
+		<div class="Nav2" id="NavWin">
+			<h2>Window</h2>
+		</div>
+	</div>
+	<div id="formatR1" class="TopBar">
+		<p class="label">Font:</p>
+		<div class="dropdown" id="fontSel">
+			<p class="dropbtn" id="fontInd">Tms Rmn</p>
+			<div class="dropdown-content" id="dropdown-font">
+				<p class="opt" onClick="fontEntr(0)">Tms Rmn</p>
+				<p class="opt" onClick="fontEntr(1)">Puffin</p>
+				<p class="opt" onClick="fontEntr(2)">Source Code</p>
+				<p class="opt" onClick="fontEntr(3)">Terminal</p>	
+			</div>
+		</div>
+    	<img src="../Images/Box.png" alt="" class="fontMenu" id="s" onClick="fontSelOpen()" draggable="false"/>
+		
+		<p class="label" id="pts">Pts:</p>
+		<input type="number" id="NumInp" max="20" min="8" required step="1" value="10" onchange="checkValue(this);">
+		<img src="../Images/Box.png" alt="" class="fontMenu" draggable="false"/>
+		
+    	<img src="../Images/BoldButton.png" alt="" id="boldButn" onclick="Bold(this)" draggable="false"/>
+   		<img src="../Images/ItalicButton.png" alt="" id="ItalicButn" onclick="Italic(this)" draggable="false"/>
+    	<img src="../Images/kButton.png" alt="" class="genButn" id="Kbtn" onclick="Kbtn(this)" draggable="false"/>
+		
+    	<img src="../Images/UnderlineButton.png" alt="" id="UnderlineButn" onclick="Underline(this)" draggable="false"/>
+    	<img src="../Images/wButton.png" alt="" id="DashedButn" class="genButn" onclick="Wbtn(this)" draggable="false"/>
+		<img src="../Images/dButon.png" alt="" id="DoubleButn" class="genButn" onclick="Dbtn(this)" draggable="false"/>
+		
+    	<img src="../Images/plusEqualButn.png" alt="" id="plusEqualButn" onclick="Math(this)" draggable="false"/>
+		
+    	<img src="../Images/starButn.png" alt="" id="starButn" onclick="Star(this)" draggable="false"/>
+	</div>
+	<div id="formatR2" class="TopBar">
+		<p class="label">Style:</p>
+        <div class="dropdown" id="styleSel">
+			<p class="dropbtn" id="styleind">Normal</p>
+			<div class="dropdown-content" id="dropdown-style">
+				<p class="opt" onClick="styleEntr(0)">Title</p>
+				<p class="opt" onClick="styleEntr(1)">Heading</p>
+				<p class="opt" onClick="styleEntr(2)">Subheading</p>
+				<p class="opt" onClick="styleEntr(3)">Normal</p>	
+			</div>
+		</div>
+    	<img src="../Images/Box.png" alt="" class="fontMenu" onClick="styleSelOpen()" draggable="false"/>
+		
+    	<img src="../Images/leftAlignPressed.png" alt="" class="allignText" id="leftAllignText" onclick="Left()" draggable="false"/>
+		<img src="../Images/centerAlign.png" alt="" class="allignText" id="centerAllignText" onclick="Center()" draggable="false"/>
+		<img src="../Images/rightAllign.png" alt="" class="allignText" id="rightAlligntText" onclick="Right()" draggable="false"/>
+		<img src="../Images/justifyAllign.png" alt="" class="allignText" id="justifyText" onclick="Just()" draggable="false"/>
+		
+		<img src="../Images/spaceing1Pressed.png" alt="" class="spaceingText" id="space1" onclick="Space1()" draggable="false"/>
+		<img src="../Images/spaceing2.png" alt="" class="spaceingText" id="space2" onclick="Space2()" draggable="false"/>
+		<img src="../Images/spaceing3.png" alt="" class="spaceingText" id="space3" onclick="Space3()" draggable="false"/>
+		
+		<img src="../Images/bracket1Pressed.png" alt="" class="bracketText" id="brTxtButn" onclick="BR1()" draggable="false"/>
+		<img src="../Images/bracket2.png" alt="" class="bracketText" id="brTxtButn2" onclick="BR2()" draggable="false"/>
+		
+		<img src="../Images/textLeftUpPressed.png" alt="" class="arrowsText" id="leftUpButn" onclick="Arrow1()" draggable="false"/>
+		<img src="../Images/textUp.png" alt="" class="arrowsText" id="UpButn" onclick="Arrow2()" draggable="false"/>
+		<img src="../Images/textRightUp.png" alt="" class="arrowsText" id="rightUpButn" onclick="Arrow3()" draggable="false"/>
+		<img src="../Images/textUp2.png" alt="" class="arrowsText" id="Up2Butn" onclick="Arrow4()" draggable="false"/>
+		
+		<img src="../Images/RulerButnPressed.png" alt="" id="rulerButn" onclick="Ruler(this)" draggable="false"/>
+	</div>
+	<div id="Ruler" class="TopBar">
+    	<img src="../Images/Ruler.png" alt="" id="ruler" draggable="false"/>
+	</div>
+	<div id="Content" style="overflow-y:scroll;">
+		<p id="Text"> <strong>Porsche 959: A Supercar Revelation</strong>
+<br> <br>
+
+October 1986 | Stuttgart, West Germany - Porsche, the esteemed German automaker, has unleashed its latest creation upon the world – the awe-inspiring Porsche 959. I had the privilege of spending a day with this groundbreaking supercar, and I can confidently say that it has redefined the limits of automotive engineering and performance. <br> <br>
+
+I first saw the 959 in a showroom at Porsche’s Zuffenhausen headquarters in Stuttgart. I had been invited to drive it for the day along with a suite of other motoring journalists. For those out of the loop, the Porsche 959 is the latest concoction to come out of the esteemed German automaker’s racing division. It started as a Group B rally car (which it never raced in) and has since been turned into a road-legal production car. I talked to Helmuth Bott, Porsche’s chief engineer, to find out more about what may well be the most important supercar ever made.<br> <br>
+
+It’s the epitome of cutting-edge technology and innovation. From the moment I set eyes on its sleek, aerodynamic body, I knew I was in for an extraordinary driving experience. The car's low-slung profile and flared wheel arches exude an air of brilliance and sophistication. It’s not the prettiest Porsche (the most recent 911 is much more eye-catching), but its features show that the 959 means business. Despite this passing resemblance to the 911, the 959’s suspension is no run-of-the-mill Porsche. Mr. Bott says the suspension system has been fine-tuned to provide a balance between razor-sharp handling and a comfortable ride. It’s true. Driving my 959 out of the Porsche headquarters, I was shocked by how incredible the ride was. Sure, it was not a Rolls Royce, but I genuinely struggled to believe that I was in a supercar as I was driving through the streets of Stuttgart. That was until I passed by groups of people, all of whom took the opportunity to gawk at the Porsche from the future.
+<br> <br>
+
+It’s once you look under the bodywork, however, that you realize that this Porsche appears to have jetted in from the future. It boasts a 2.85-liter, twin-turbocharged flat-six engine, generating an astonishing 450 horsepower. It’s the first Porsche ever to feature all-wheel drive, definitely a nod to the 953’s racing days in the Paris-Dakar rally. This all means that it handles very well. Even better, it’ll do 317 km/h (or so Porsche says), making it the fastest production car ever made. That’s no easy feat, considering that the 959 weighs 1.4 tonnes. Luckily, Germany has a place for me to test Porsche’s claim and see what the new tech in the 959 is capable of - the Autobahn.
+<br> <br>
+
+I merged onto the German highway network just south of Stuttgart and headed west. With the unrestricted stretches of the renowned Autobahn lying ahead, it was the perfect opportunity to unleash the Porsche 959's true potential. As I pressed the pedal, the supercar responded with an immediate surge of power. The autobahn's open sections allowed me to experience the 959's remarkable top speed firsthand. It effortlessly soared past the 250 km/h mark, with the twin-turbocharged flat-six engine delivering its 450 horsepower in a symphony of mechanical excellence. The aerodynamic design, along with the all-wheel-drive system, provided a sense of stability and control that I’ve never experienced at this speed. The 959's performance on the Autobahn was not just fast; it was a symphony of engineering precision and a testament to Porsche's relentless pursuit of automotive excellence.
+<br> <br>
+
+Leaving the Autobahn behind, I ventured into the enchanting landscape of the German Black Forest, where B-roads wind through dense forests and picturesque villages. Despite its formidable capabilities on the high-speed stretches, the Porsche 959 demonstrated its versatility as I navigated the twisty roads of this pristine region. The same advanced suspension system that had impressed me earlier on the highway now revealed its prowess on these challenging terrain. The car's responsive handling, combined with its all-wheel-drive traction, allowed me to tackle corners with confidence, making every curve an exhilarating experience.<br> <br>
+            
+What struck me most during this drive through the Black Forest was how seamlessly the 959 blended cutting-edge technology with pure driving pleasure. It wasn't just about speed; it was about the harmony between man and machine. Porsche's innovative engineering, from the twin-turbocharged engine to the all-wheel-drive system, was not a mere display of technical wizardry. It was a testament to the brand's commitment to providing drivers with a holistic and immersive driving experience. The Porsche 959, whether on the limitless Autobahn or the challenging B-roads of the Black Forest, showcased the future of automotive performance without compromising on the essence of driving pleasure.<br> <br>
+            
+The 959 represents a new era of supercar. The new Porsche transcends what we’ve come to expect from the conventional sports car; yes, it’s fast around a track and even faster in a straight line. But it’s comfortable. It’s got creature comforts one would expect to find in an S-Class and tech that feels like it’s from a Back to the Future movie. It’s a special car - and maybe the most important of the decade.<br> <br>
+</p>
+	</div>
+</body>
+
+</html>

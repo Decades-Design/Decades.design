@@ -1,0 +1,149 @@
+<!doctype html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Nintendo_Gameboy</title>
+	<link href="Doc.css" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" href="https://use.typekit.net/kuj4kju.css">
+	<script type="text/javascript" src="DocScript.js"></script>
+    <link rel="shortcut icon" type="image/x-icon" href="../../Branding/80sIconLight.png"/>
+</head>
+	
+<body>
+	<nav id="Nav" class="TopBar">
+		<a href="../FileSelect" id="CloseBTN"  draggable="false">
+		    <div id="Button_left" class="NavElement">
+                <img src="../Images/CloseButton.png" alt="" width="65" height="14" class="NavImg" id="NavCloseIMG" draggable="false"/>
+		    </div>
+        </a>
+		<div id="Title_center" class="NavElement">
+			<h1 id="Title" class="unselectable">Nintendo_Gameboy.DOC</h1>
+		</div>
+		<div id="Button_right1" class="NavElement">
+			<img src="../Images/Down ArrowButton.png" width="30.32" height="37.48" alt="" class="NavImg" id="ArrowDownIMG" draggable="false"/>
+		</div>
+		<div id="Button_right2" class="NavElement">
+			<img src="../Images/Up & Downbutton.png" width="63.38" height="38" alt="" class="NavImg" id="ArrowUpIMG" draggable="false"/>
+		</div>
+	</nav>
+	<div id="INav2" class="TopBar">
+		<img src="../Images/Close small.png" width="32" height="12" alt="" class="NavImg" id="CloseIMG" draggable="false"/>
+		<div class="Nav2" id="NavFile">
+			<h2>File</h2>
+		</div>
+		<div class="Nav2" id="NavEdit">
+			<h2>Edit</h2>
+		</div>
+		<div class="Nav2" id="NavView">
+			<h2>View</h2>
+		</div>
+		<div class="Nav2" id="NavInsert">
+			<h2>Insert</h2>
+		</div>
+		<div class="Nav2" id="NavFormat">
+			<h2>Format</h2>
+		</div>
+		<div class="Nav2" id="NavUtil">
+			<h2>Utilities</h2>
+		</div>
+		<div class="Nav2" id="NavMacro">
+			<h2>Macro</h2>
+		</div>
+		<div class="Nav2" id="NavWin">
+			<h2>Window</h2>
+		</div>
+	</div>
+	<div id="formatR1" class="TopBar">
+		<p class="label">Font:</p>
+		<div class="dropdown" id="fontSel">
+			<p class="dropbtn" id="fontInd">Tms Rmn</p>
+			<div class="dropdown-content" id="dropdown-font">
+				<p class="opt" onClick="fontEntr(0)">Tms Rmn</p>
+				<p class="opt" onClick="fontEntr(1)">Puffin</p>
+				<p class="opt" onClick="fontEntr(2)">Source Code</p>
+				<p class="opt" onClick="fontEntr(3)">Terminal</p>	
+			</div>
+		</div>
+    	<img src="../Images/Box.png" alt="" class="fontMenu" id="s" onClick="fontSelOpen()" draggable="false"/>
+		
+		<p class="label" id="pts">Pts:</p>
+		<input type="number" id="NumInp" max="20" min="8" required step="1" value="10" onchange="checkValue(this);">
+		<img src="../Images/Box.png" alt="" class="fontMenu" draggable="false"/>
+		
+    	<img src="../Images/BoldButton.png" alt="" id="boldButn" onclick="Bold(this)" draggable="false"/>
+   		<img src="../Images/ItalicButton.png" alt="" id="ItalicButn" onclick="Italic(this)" draggable="false"/>
+    	<img src="../Images/kButton.png" alt="" class="genButn" id="Kbtn" onclick="Kbtn(this)" draggable="false"/>
+		
+    	<img src="../Images/UnderlineButton.png" alt="" id="UnderlineButn" onclick="Underline(this)" draggable="false"/>
+    	<img src="../Images/wButton.png" alt="" id="DashedButn" class="genButn" onclick="Wbtn(this)" draggable="false"/>
+		<img src="../Images/dButon.png" alt="" id="DoubleButn" class="genButn" onclick="Dbtn(this)" draggable="false"/>
+		
+    	<img src="../Images/plusEqualButn.png" alt="" id="plusEqualButn" onclick="Math(this)" draggable="false"/>
+		
+    	<img src="../Images/starButn.png" alt="" id="starButn" onclick="Star(this)" draggable="false"/>
+	</div>
+	<div id="formatR2" class="TopBar">
+		<p class="label">Style:</p>
+        <div class="dropdown" id="styleSel">
+			<p class="dropbtn" id="styleind">Normal</p>
+			<div class="dropdown-content" id="dropdown-style">
+				<p class="opt" onClick="styleEntr(0)">Title</p>
+				<p class="opt" onClick="styleEntr(1)">Heading</p>
+				<p class="opt" onClick="styleEntr(2)">Subheading</p>
+				<p class="opt" onClick="styleEntr(3)">Normal</p>	
+			</div>
+		</div>
+    	<img src="../Images/Box.png" alt="" class="fontMenu" onClick="styleSelOpen()" draggable="false"/>
+		
+    	<img src="../Images/leftAlignPressed.png" alt="" class="allignText" id="leftAllignText" onclick="Left()" draggable="false"/>
+		<img src="../Images/centerAlign.png" alt="" class="allignText" id="centerAllignText" onclick="Center()" draggable="false"/>
+		<img src="../Images/rightAllign.png" alt="" class="allignText" id="rightAlligntText" onclick="Right()" draggable="false"/>
+		<img src="../Images/justifyAllign.png" alt="" class="allignText" id="justifyText" onclick="Just()" draggable="false"/>
+		
+		<img src="../Images/spaceing1Pressed.png" alt="" class="spaceingText" id="space1" onclick="Space1()" draggable="false"/>
+		<img src="../Images/spaceing2.png" alt="" class="spaceingText" id="space2" onclick="Space2()" draggable="false"/>
+		<img src="../Images/spaceing3.png" alt="" class="spaceingText" id="space3" onclick="Space3()" draggable="false"/>
+		
+		<img src="../Images/bracket1Pressed.png" alt="" class="bracketText" id="brTxtButn" onclick="BR1()" draggable="false"/>
+		<img src="../Images/bracket2.png" alt="" class="bracketText" id="brTxtButn2" onclick="BR2()" draggable="false"/>
+		
+		<img src="../Images/textLeftUpPressed.png" alt="" class="arrowsText" id="leftUpButn" onclick="Arrow1()" draggable="false"/>
+		<img src="../Images/textUp.png" alt="" class="arrowsText" id="UpButn" onclick="Arrow2()" draggable="false"/>
+		<img src="../Images/textRightUp.png" alt="" class="arrowsText" id="rightUpButn" onclick="Arrow3()" draggable="false"/>
+		<img src="../Images/textUp2.png" alt="" class="arrowsText" id="Up2Butn" onclick="Arrow4()" draggable="false"/>
+		
+		<img src="../Images/RulerButnPressed.png" alt="" id="rulerButn" onclick="Ruler(this)" draggable="false"/>
+	</div>
+	<div id="Ruler" class="TopBar">
+    	<img src="../Images/Ruler.png" alt="" id="ruler" draggable="false"/>
+	</div>
+	<div id="Content" style="overflow-y:scroll;">
+		<p id="Text"> <strong>Nintendo Launches the Portable Gaming Revolution</strong>
+<br> <br>
+
+July 10, 1989 | New York City, USA - After the triumph of the NES in the 1980s, many doubted whether the company could recreate the same magic nearly a decade after the launch of their most successful console to date. However, with the new portable Gameboy, Nintendo has silenced its skeptics and solidified its position as a leader in the gaming industry. <br> <br>
+
+Nintendo, the renowned Japanese video game company, has once again captured the imagination of gamers worldwide with the highly-anticipated release of their latest creation, the Gameboy. Packed with groundbreaking technology and an array of captivating games, this portable gaming console is poised to revolutionize the gaming industry, providing endless hours of on-the-go entertainment. <br> <br>
+
+At first, the Gameboy may not seem like a good console. It features a dull LCD monochromatic display, no backlighting, and relatively little processing power. Yet, with the launch of the Gameboy, Nintendo gets the right answer to the question that other manufacturers have failed to answer: What do consumers want? Let&#39s dive in. <br> <br>
+
+Nintendo&#39s genius lies in recognizing the need for a portable gaming device that can be enjoyed by anyone, anytime, for a long time. With the Gameboy, players are no longer confined to their living rooms or arcade parlors, Instead, they can venture into the world of gaming, whether on a long train journey of a quiet afternoon in the park. While the LCD display may not rival those of Atari and Sega, it ensures the Gameboy has one, vital feature - battery life. What good is a portable console if you have to change the batteries every 4 hours? Additionally, the 8-bit graphics and elementary design (it only has four buttons and a directional pad) make the console simple to use and ensures that there is virtually no learning curve. <br> <br>
+
+Central to the Gameboy&#39s success is its extensive library of games. Launching with an impressive lineup of titles, including, the popular &#40;Tetris,&#41; the Gameboy provides a diverse range of gaming experiences to suit all tastes. Whether you’re a puzzle enthusiast, a racing fanatic, or an action-adventure seeker, this handheld console has something for everyone. <br> <br>
+
+The flexibility of owning a Gameboy is not, in and of itself, revolutionary. The Gameboy is by no means the first portable gaming console - such a concept has existed since 1979, with the launch of the Microvision and its interchangeable game cartridges. What makes the Gameboy different from the rest (and what will ensure its success worldwide) are the incredible innovations that Nintendo has come up with. <br> <br>
+
+The most talked about of these innovations is the Link Cable, which allows games to connect two Gameboys together, enabling head-to-head multiplayer gameplay. This groundbreaking feature opens up a whole new world of competitive gaming, allowing players to challenge their friends or engage in cooperative missions, all in the palm of their hands. <br> <br>
+
+As gaming technology continues to evolve, one thing is certain: the Gameboy will leave an indelible mark on the gaming industry and the hearts of gamers worldwide. Its portable design, vast library of games, and multiplayer capabilities have transformed the way we perceive gaming, making it more accessible and enjoyable for people of all ages. <br> <br>
+
+However, the Gameboy is not without its share of potential issues. One notable concern raised by gamers is the lack of a backlight, which may make it challenging to play in dimly lit environments. Additionally, the limited processing power of the console may lead to occasional slowdowns or graphical glitches in more complex games. <br> <br>
+
+Despite these concerns, the significance of the Gameboy cannot be understated. It marks a turning point in the evolution of gaming, bringing it out of the living room and into the hands of millions. With its portability, Nintendo has effectively bridged the gap between condole and arcade gaming, revolutionizing the industry. As competition will surely arise (Atari is developing its Gameboy rival, set to be launched this fall), the Gameboy will stand the test of time. That is because, by putting aside full-color backlit screens and franchise videogames (and their ego), Nintendo have made the perfect portable gaming console. <br> <br>
+
+So, grab your Gameboy, insert your favorite cartridge, and embark on a gaming adventure unlike anything you&#39ve experienced before. Nintendo&#39s groundbreaking handheld console is here to stay (it will launch in Europe next year), and it promises to bring joy, excitement, and endless hours of entertainment to millions of gamers worldwide.
+</p>
+	</div>
+</body>
+
+</html>
